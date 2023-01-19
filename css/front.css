@@ -1,0 +1,12 @@
+
+.separador{
+    max-height:8px;
+}
+
+.cabecera{
+    /* background-color: red; */
+    height: 250px;
+    width: 100%;
+    background-image: url(/assets/img/header.jpg); 
+    margin: 0px auto;
+}
