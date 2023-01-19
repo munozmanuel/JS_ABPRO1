@@ -4,7 +4,7 @@ const productDB = {
     "id": 1,
     "nombre":"Atari 800XL",
     "codigo": "A123",
-    "valor": "12.60",
+    "valor": "90000",
     "cantidad": "10",
     "otros": {
         "color": "azul",
@@ -18,7 +18,7 @@ const productDB = {
     "id": 2,
     "nombre":"Tetris",
     "codigo": "T567",
-    "valor": "10.50",
+    "valor": "5000",
     "cantidad": "15",
     "otros": {
         "plataforma": "Nintendo",
@@ -32,7 +32,7 @@ const productDB = {
     "id": 3,
     "nombre":"Xbox",
     "codigo": "X890",
-    "valor": "99.99",
+    "valor": "300000",
     "cantidad": "3",
     "otros": {
         "fabricante": "Microsoft",
@@ -45,7 +45,7 @@ const productDB = {
     "id": 4,
     "nombre":"Consola Sega",
     "codigo": "S456",
-    "valor": "19.99",
+    "valor": "165000",
     "cantidad": "7",
     "otros": {
         "fabricante": "Sega",
@@ -58,7 +58,7 @@ const productDB = {
     "id": 5,
     "nombre":"Game Boy",
     "codigo": "G123",
-    "valor": "14.99",
+    "valor": "380000",
     "cantidad": "8",
     "otros": {
         "fabricante": "Nintendo",
@@ -72,7 +72,7 @@ const productDB = {
     "id": 6,
     "nombre":"Virtual Boy",
     "codigo": "V456",
-    "valor": "45.50",
+    "valor": "180000",
     "cantidad": "2",
     "otros": {
         "fabricante": "Nintendo",
@@ -86,7 +86,7 @@ const productDB = {
     "id": 7,
     "nombre":"Juego Arcade",
     "codigo": "J789",
-    "valor": "75.50",
+    "valor": "30000",
     "cantidad": "1",
     "otros": {
         "fabricante": "Atari",
@@ -99,7 +99,7 @@ const productDB = {
     "id": 8,
     "nombre":"NES",
     "codigo": "N123",
-    "valor": "25.99",
+    "valor": "230000",
     "cantidad": "5",
     "otros": {
         "fabricante": "Nintendo",
@@ -113,7 +113,7 @@ const productDB = {
     "id": 9,
     "nombre":"SNES",
     "codigo": "S789",
-    "valor": "35.99",
+    "valor": "220000",
     "cantidad": "4",
     "otros": {
         "fabricante": "Nintendo",
@@ -127,7 +127,7 @@ const productDB = {
     "id": 10,
     "nombre":"Walkman",
     "codigo": "W123",
-    "valor": "16.50",
+    "valor": "40000",
     "cantidad": "8",
     "otros": {
         "fabricante": "Sony",
@@ -141,7 +141,7 @@ const productDB = {
     "id": 11,
     "nombre":"Macintosh",
     "codigo": "M456",
-    "valor": "110.99",
+    "valor": "300000",
     "cantidad": "1",
     "otros": {
         "fabricante": "Apple",
