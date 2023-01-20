@@ -80,215 +80,284 @@
     <!-- Section-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/01_atari.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
-                                <!-- Product price-->
-                                $40.00 - $80.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="contenedor-general" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- ----- CONTENEDOR 1 ----- -->
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
-                        </div>
+                        <div id="etiqueta-oferta-0" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"></div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/02_mac.jpg" alt="..." />
+                        <img class="card-img-top" id="img-0" src="" alt="..."/>
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
+                                <h5 class="fw-bolder" id="titulo-0"></h5>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
+                                <p id="precio-0"></p>
+                                <p id="precio-oferta-0"></p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
                         </div>
                     </div>
                 </div>
+                <!-- ----- CONTENEDOR 2 ----- -->
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
-                        </div>
+                        <div id="etiqueta-oferta-1" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/03_walkman.jpg" alt="..." />
+                        <img class="card-img-top" id="img-1" src="" alt="..."/>
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
+                                <h5 class="fw-bolder" id="titulo-1"></h5>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
+                                <p id="precio-1"></p>
+                                <p id="precio-oferta-1"></p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-5">
+                 <!-- ----- CONTENEDOR 3 ----- -->
+                 <div class="col mb-5">
                     <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-2" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/04_gameboy.jpg" alt="..." />
+                        <img class="card-img-top" id="img-2" src="" alt="..."/>
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
+                                <h5 class="fw-bolder" id="titulo-2"></h5>
                                 <!-- Product price-->
-                                $40.00
+                                <p id="precio-2"></p>
+                                <p id="precio-oferta-2"></p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
                         </div>
                     </div>
                 </div>
+                 <!-- ----- CONTENEDOR 4 ----- -->
+                 <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-3" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" id="img-3" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" id="titulo-3">Nombre Producto</h5>
+                                <!-- Product price-->
+                                <p id="precio-3">$60.000</p>
+                                <p id="precio-oferta-3"></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----- CONTENEDOR 5 ----- -->
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
-                        </div>
+                        <div id="etiqueta-oferta-4" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/05_tetris.jpg" alt="..." />
+                        <img class="card-img-top" id="img-4" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Sale Item</h5>
+                                <h5 class="fw-bolder" id="titulo-4">Nombre Producto</h5>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$50.00</span>
-                                $25.00
+                                <p id="precio-4">$60.000</p>
+                                <p id="precio-oferta-4"></p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
                         </div>
                     </div>
                 </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/06_virtualboy.jpg" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder">Fancy Product</h5>
-                                <!-- Product price-->
-                                $120.00 - $280.00
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- ----- CONTENEDOR 6 ----- -->
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
-                        </div>
+                        <div id="etiqueta-oferta-5" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/07_snes.jpg" alt="..." />
+                        <img class="card-img-top" id="img-5" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Special Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
+                                <h5 class="fw-bolder" id="titulo-5">Nombre Producto</h5>
                                 <!-- Product price-->
-                                <span class="text-muted text-decoration-line-through">$20.00</span>
-                                $18.00
+                                <p id="precio-5">$60.000</p>
+                                <p id="precio-oferta-5"></p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
                         </div>
                     </div>
                 </div>
+                <!-- ----- CONTENEDOR 7 ----- -->
                 <div class="col mb-5">
                     <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-6" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" src="/assets/img/08_sega.jpg" alt="..." />
+                        <img class="card-img-top" id="img-6" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder">Popular Item</h5>
-                                <!-- Product reviews-->
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
+                                <h5 class="fw-bolder" id="titulo-6">Nombre Producto</h5>
                                 <!-- Product price-->
-                                $40.00
+                                <p id="precio-6">$60.000</p>
+                                <p id="precio-oferta-6"></p>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
-                            </div>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
                         </div>
                     </div>
                 </div>
+                 <!-- ----- CONTENEDOR 8 ----- -->
+                 <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-7" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" id="img-7" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" id="titulo-7">Nombre Producto</h5>
+                                <!-- Product price-->
+                                <p id="precio-7">$60.000</p>
+                                <p id="precio-oferta-7"></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- ----- CONTENEDOR 9 ----- -->
+                 <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-8" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" id="img-8" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" id="titulo-8">Nombre Producto</h5>
+                                <!-- Product price-->
+                                <p id="precio-8">$60.000</p>
+                                <p id="precio-oferta-8"></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- ----- CONTENEDOR 10 ----- -->
+                 <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-9" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" id="img-9" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" id="titulo-9">Nombre Producto</h5>
+                                <!-- Product price-->
+                                <p id="precio-9">$60.000</p>
+                                <p id="precio-oferta-9"></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- ----- CONTENEDOR 11 ----- -->
+                 <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-10" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" id="img-10" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" id="titulo-10">Nombre Producto</h5>
+                                <!-- Product price-->
+                                <p id="precio-10">$60.000</p>
+                                <p id="precio-oferta-10"></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- ----- CONTENEDOR 12 ----- -->
+                 <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div id="etiqueta-oferta-11" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <!-- Product image-->
+                        <img class="card-img-top" id="img-11" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder" id="titulo-11">Nombre Producto</h5>
+                                <!-- Product price-->
+                                <p id="precio-11">$60.000</p>
+                                <p id="precio-oferta-11"></p>
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
