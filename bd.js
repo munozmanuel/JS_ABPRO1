@@ -7,6 +7,7 @@ const productDB = [
         "codigo": "A123",
         "precio": 90000,
         "poferta": 81000,
+        "dscto":"10%",
         "oferta": false,
         "img": "assets/img/atari-800xl.webp",
         "otros": {
@@ -20,6 +21,7 @@ const productDB = [
         "codigo": "T567",
         "precio": 5000,
         "poferta": 4250,
+        "dscto":"10%",
         "oferta": true,
         "img": "assets/img/tetris.webp",
         "otros": {
@@ -34,6 +36,7 @@ const productDB = [
         "codigo": "XBX",
         "precio": 300000,
         "poferta":255000,
+        "dscto":"10%",
         "oferta": false,
         "img": "assets/img/xbox.webp",
         "otros": {
@@ -48,6 +51,7 @@ const productDB = [
         "codigo": "S456",
         "precio": 165000,
         "poferta": 148250,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -62,6 +66,7 @@ const productDB = [
         "codigo": "G123",
         "precio": 380000,
         "poferta": 330000,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -76,6 +81,7 @@ const productDB = [
         "codigo": "V456",
         "precio": 180000,
         "poferta": 153000,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -90,6 +96,7 @@ const productDB = [
         "codigo": "J789",
         "precio": 30000,
         "poferta": 25500,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -104,6 +111,7 @@ const productDB = [
         "codigo": "N123",
         "precio": 230000,
         "poferta": 197500,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -118,6 +126,7 @@ const productDB = [
         "codigo": "S789",
         "precio": 220000,
         "poferta": 187000,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -132,6 +141,7 @@ const productDB = [
         "codigo": "W123",
         "precio": 40000,
         "poferta": 34000,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
@@ -146,6 +156,7 @@ const productDB = [
         "codigo": "M456",
         "precio": 300000,
         "poferta": 255000,
+        "dscto":"10%",
         "oferta": true,
         "img": "",
         "otros": {
