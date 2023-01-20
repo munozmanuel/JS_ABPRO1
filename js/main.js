@@ -22,6 +22,7 @@ $( document ).ready(function() {
 
         //Si no está en oferta le pasa el precio normal, si está en oferta añade clase 'text-muted' y 'text-decoration-line-through' al precio normal y añade el precio de oferta
             if (!$("#etiqueta-oferta-"+i).hasClass("d-none")) {
+                $("#etiqueta-oferta-"+i).html("Oferta "+productDB[i].dscto);
                 $("#precio-"+i).html(formatoCL.format(productDB[i].precio));
 
                 $("#precio-"+i).addClass('text-muted text-decoration-line-through');
