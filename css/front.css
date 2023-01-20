@@ -10,3 +10,67 @@
     background-image: url(/assets/img/header.jpg); 
     margin: 0px auto;
 }
+
+.header {
+    background-color: black;
+    position: relative;
+    text-align: center;
+}
+
+.header h1{
+    background-color: lightblue;
+}
+.header img{
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.headerTitulo {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(247, 183, 33);
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+
+  }
+
+  .nav-link:hover{
+    transform: scale(1.2);
+    font-weight: bold;
+    transition: all .5s;
+
+  }
+
+  .headerSubtitulo {
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    bottom: 8px;
+    left: 60px;
+
+  }
+
+  
+
+
+  @media (max-width: 600px) {
+
+    .headerTitulo{
+        font-size: 25px;
+        margin: 0px auto;
+    }
+    .header img {
+        opacity: .5;
+    }
+    .headerSubtitulo {
+        line-height: 20px;
+        font-size: 20px;
+      /* display: none; */
+    }
+  }
+  
