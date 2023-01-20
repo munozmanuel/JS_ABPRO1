@@ -1,0 +1,26 @@
+#resumen-carro{
+    padding-top: 32px;
+}
+
+#posicion-dropdown {
+    display: flex;
+    width: 38vw;
+    justify-content: space-around;
+    gap: 8vw;
+    padding-right: 1vw;
+    border: 0.2px solid rgba(128, 128, 128, 0.384);
+    margin: 6px;
+    align-items: center;
+    align-content: center;
+    margin-right: 40px;
+    
+}
+
+#posicion-dropdown p {
+    margin:0;
+    padding: 10px;
+}
+
+.icono-eliminar:hover {
+    cursor: pointer;
+}
