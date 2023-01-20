@@ -14,9 +14,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/front.css">
+    <!-- <link rel="stylesheet" href="/css/front.css"> -->
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/9bf55c7eb1.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -44,13 +45,30 @@
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+                <div class="nav-item dropdown">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        Carro
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
                     </button>
-                </form>
+                     <div class="dropdown-menu dropdown-menu-lg-end">
+                        <ul id="resumen-carro">
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+
+                        </ul>
+                        <a href="#" style="display: flex; justify-content: center; width: 100%; padding-bottom: 1vw;">Ir al Carrito</a>
+                     </div>
+                       
+                </div>
             </div>
         </div>
     </nav>
@@ -367,10 +385,18 @@
             <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
         </div>
     </footer>
+
+    
+    <!-- JQuery -->
+    <script src="js/lib/jquery-3.6.3.min.js"></script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script src="js/bd.js"></script>
+    <script src="js/main.js"></script>
+
+
 </body>
 
 </html>
