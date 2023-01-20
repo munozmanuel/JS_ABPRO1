@@ -1,3 +1,7 @@
+// alert("alertaaaaa csm!!");
+
+// $(body).html("HOLA");
+
 //Funcion para añadir formato CLP a los datos numéricos
 const formatoCL = new Intl.NumberFormat("es-CL", {
     style: "currency",

@@ -7,7 +7,7 @@ const productDB = [
         "poferta": 81000,
         "dscto":"10%",
         "oferta": false,
-        "img": "assets/img/atari-800xl.webp",
+        "img": "assets/img/01_atari.jpg",
         "otros": {
             "año": "1980",
         }
@@ -21,7 +21,7 @@ const productDB = [
         "poferta": 4250,
         "dscto":"10%",
         "oferta": true,
-        "img": "assets/img/tetris.webp",
+        "img": "assets/img/12_tetris_game.jpg",
         "otros": {
             "año": "1990",
             "categoria": "puzzle"
@@ -36,7 +36,7 @@ const productDB = [
         "poferta": 255000,
         "dscto":"10%",
         "oferta": true,
-        "img": "assets/img/xbox.webp",
+        "img": "assets/img/10_xbox.jpg",
         "otros": {
             "fabricante": "Microsoft",
             "año": "2001"
@@ -51,7 +51,7 @@ const productDB = [
         "poferta": 148250,
         "dscto":"10%",
         "oferta": true,
-        "img": "",
+        "img": "assets/img/08_sega.jpg",
         "otros": {
             "fabricante": "Sega",
             "generación": "4ta"
@@ -66,7 +66,7 @@ const productDB = [
         "poferta": 330000,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/04_gameboy.jpg",
         "otros": {
             "fabricante": "Nintendo",
             "generación": "8va"
@@ -81,7 +81,7 @@ const productDB = [
         "poferta": 153000,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/06_virtualboy.jpg",
         "otros": {
             "fabricante": "Nintendo",
             "generación": "1era"
@@ -90,13 +90,13 @@ const productDB = [
 
     {
         "id": "7",
-        "nombre": "Juego Arcade",
+        "nombre": "Cartucho Juego Tetris | NES",
         "codigo": "J789",
         "precio": 30000,
         "poferta": 25500,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/05_tetris.jpg",
         "otros": {
             "fabricante": "Atari",
             "generación": "2da"
@@ -111,7 +111,7 @@ const productDB = [
         "poferta": 197500,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/09_nes.jpg",
         "otros": {
             "fabricante": "Nintendo",
             "generación": "3ra"
@@ -126,7 +126,7 @@ const productDB = [
         "poferta": 187000,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/07_snes.jpg",
         "otros": {
             "fabricante": "Nintendo",
             "generación": "4ta"
@@ -135,13 +135,13 @@ const productDB = [
 
     {
         "id": "10",
-        "nombre": "Walkman",
+        "nombre": "Sony Walkman",
         "codigo": "W123",
         "precio": 40000,
         "poferta": 34000,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/03_walkman.jpg",
         "otros": {
             "fabricante": "Sony",
             "generación": "1era"
@@ -150,16 +150,31 @@ const productDB = [
 
     {
         "id": "11",
-        "nombre": "Macintosh",
+        "nombre": "Apple Macintosh 1984",
         "codigo": "M456",
         "precio": 300000,
         "poferta": 255000,
         "dscto":"10%",
         "oferta": false,
-        "img": "",
+        "img": "assets/img/02_mac_.jpg",
         "otros": {
             "fabricante": "Apple",
             "generación": "1era"
         }
-    }
+    },
+
+    {
+        "id": "12",
+        "nombre": "Chrono Trigger Super Nintendo",
+        "codigo": "M456",
+        "precio": 250000,
+        "poferta": 120000,
+        "dscto":"10%",
+        "oferta": false,
+        "img": "assets/img/11_chrono.jpg",
+        "otros": {
+            "fabricante": "Apple",
+            "generación": "1era"
+        }
+    },
 ];
