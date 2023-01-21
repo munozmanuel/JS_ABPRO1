@@ -49,12 +49,11 @@
                     <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi-cart-fill me-1"></i>
                         Carro
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
+                        <span id="cantidad-carro" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
-                     <div class="dropdown-menu dropdown-menu-lg-end">
+                     <div class="dropdown-menu dropdown-menu-lg-end contenedor-resumen">
                         <ul id="resumen-carro">
-                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i class="fa-solid fa-trash icono-eliminar"></i></li>
-                            <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i class="fa-solid fa-trash icono-eliminar"></i></li>
+<!--                     <li id="posicion-dropdown"><p id="nombre-li"></p><p id="precio-li" ></p><i class="fa-solid fa-trash icono-eliminar"></i></li> -->
                            
 
                         </ul>
@@ -111,7 +110,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto" href="#" onclick="agregarCarrito(0)">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -134,7 +133,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(1)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +156,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(2)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +179,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(3)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -203,7 +202,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(4)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -226,7 +225,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(5)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -249,7 +248,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(6)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -272,7 +271,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(7)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -295,7 +294,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(8)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -318,7 +317,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(9)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -341,7 +340,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(10)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -364,7 +363,7 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</a></div>
+                            <div class="text-center"><button onclick="agregarCarrito(11)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>

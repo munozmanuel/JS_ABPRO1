@@ -2,18 +2,43 @@
     padding-top: 32px;
 }
 
-#posicion-dropdown {
+.contenedor-resumen {
+    min-width: 40rem !important;
+}
+
+#iconos-res-carro {
     display: flex;
-    width: 38vw;
-    justify-content: space-around;
-    gap: 8vw;
+    gap:0.7vw;
+}
+
+.contador-resu {
+    line-height: 1.5px !important;
+    text-align: center;
+}
+
+#cont-resu-carro {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+#posicion-dropdown {
+    display: grid;
+    grid-template-columns: 3fr 0.5fr 1fr 0.2fr;
+    width: 45w;
+    gap: 1.8vw;
     padding-right: 1vw;
     border: 0.2px solid rgba(128, 128, 128, 0.384);
     margin: 6px;
     align-items: center;
     align-content: center;
-    margin-right: 40px;
-    
+    margin-right: 40px;   
+}
+
+.precio-li {
+    width: 5vw;
+    text-align: left;
 }
 
 #posicion-dropdown p {

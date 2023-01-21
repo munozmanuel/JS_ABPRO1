@@ -36,3 +36,23 @@ $( document ).ready(function() {
                 };
     };
 });
+
+let contadorCarrito = 0;
+$('#cantidad-carro').html(contadorCarrito);
+
+//Función para añadir elemento al carrito
+function agregarCarrito(opcion) {
+    $('#resumen-carro').append('<li id="posicion-dropdown"><p id="nombre-li-'+opcion+'"></p><div id="cont-resu-carro"><i class="fa-solid fa-square-minus fa-xl"></i><p class="contador-resu badge bg-dark">1</p><i class="fa-solid fa-square-plus fa-xl"></i></div></div><p class="precio-li" id="precio-li-'+opcion+'" ></p><div><i class="fa-solid fa-trash icono-eliminar"></i></li>');
+    $('#nombre-li-'+opcion).html(productDB[opcion].nombre);
+
+    if (productDB[opcion].oferta){
+        $('#precio-li-'+opcion).html(formatoCL.format(productDB[opcion].poferta));
+    } else {
+        $('#precio-li-'+opcion).html(formatoCL.format(productDB[opcion].precio));
+    };
+
+    contadorCarrito = contadorCarrito + 1;
+    $('#cantidad-carro').html(contadorCarrito);
+
+    console.log("holi");
+}
