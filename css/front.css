@@ -1,3 +1,9 @@
+:root{
+  --master-color: #16697A;
+  --second-color: rgb(247, 183, 33);
+}
+
+
 .separador {
   max-height: 5px;
 }
@@ -111,7 +117,7 @@
 
 .pieDePagina {
   font-family: 'Share Tech Mono', monospace;
-  background-color: #16697A;
+  background-color: var(--master-color);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
