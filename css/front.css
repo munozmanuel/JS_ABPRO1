@@ -1,11 +1,16 @@
 :root{
-  --master-color: #16697A;
-  --second-color: rgb(247, 183, 33);
+  --master-color: rgb(73, 43, 223)  ;
+  --color2: rgb(255, 190, 38) ;
+  --colorTexto: lightgray;
 }
 
 
 .separador {
   max-height: 5px;
+}
+.separador1 {
+  max-height: 5px;
+  background-color: var(--color2);
 }
 
 .cabecera {
@@ -17,7 +22,7 @@
 }
 
 .header {
-  background-color: black;
+  background-color: var(--master-color);
   position: relative;
   text-align: center;
 }
@@ -50,10 +55,7 @@
   grid-template-columns: 1fr;
 }
 
-.navLogo :hover{
-  display: ;
 
-}
 .hoverImg {
   position: absolute;
   top: 0;
@@ -70,7 +72,7 @@
   font-family: 'Share Tech Mono', monospace;
   font-size: 50px;
   font-weight: 900;
-  color: rgb(247, 183, 33);
+  color: var(--color2);
   position: absolute;
   bottom: 20px;
   left: 50px;
@@ -80,13 +82,13 @@
 .nav-link:hover {
   transform: scale(1.1);
   transition: all .5s;
-
+  
 }
 
 .headerSubtitulo {
   line-height: 30px;
   font-size: 30px;
-  color: white;
+  color: var(--colorTexto);
   position: absolute;
   bottom: 8px;
   left: 60px;
@@ -151,5 +153,5 @@
 
 .separadorBajada {
   max-height: 2px;
-  background-color: rgb(247, 183, 33);
+  background-color: var(--color2);
 }
