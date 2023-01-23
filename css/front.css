@@ -1,7 +1,8 @@
 :root{
-  --master-color: rgb(73, 43, 223)  ;
+  --master-color: rgb(72, 42, 223)  ;
   --color2: rgb(255, 190, 38) ;
   --colorTexto: lightgray;
+  --gradiente: linear-gradient(0deg, rgb(128, 104, 245) 0%, rgba(73,43,223,1) 100%);
 }
 
 
@@ -119,7 +120,7 @@
 
 .pieDePagina {
   font-family: 'Share Tech Mono', monospace;
-  background-color: var(--master-color);
+  background: var(--gradiente);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -154,4 +155,11 @@
 .separadorBajada {
   max-height: 2px;
   background-color: var(--color2);
+}
+
+
+.footerWave {
+  background-color: ;
+
+
 }
