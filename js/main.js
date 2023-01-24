@@ -108,6 +108,7 @@ function calcularMonto(){
         };
     };
     console.log(precioTotal);
+    $('#monto-total').html(formatoCL.format(precioTotal));
 };
 
 

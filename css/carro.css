@@ -54,6 +54,8 @@
     display: flex;
     justify-content: center;
     gap: 4vw;
+    align-items: center;
+    padding-bottom: 10px;
 }
 
 .btn-outline-warning {
