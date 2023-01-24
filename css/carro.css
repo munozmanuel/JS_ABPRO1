@@ -67,3 +67,42 @@
     color: black !important;
     border-color: black !important;
 }
+
+@media only screen and (max-width: 755px) {
+    #resumen-carro{
+        padding-top: 32px;
+        font-size: 3vw;
+    }
+    
+    .contenedor-resumen {
+        min-width: 20rem !important;
+    }
+
+    #resumen-carro li {
+        grid-template-columns: 1fr 0.5fr 0.5fr 0.2fr;
+        font-size: medium;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    #resumen-carro li {
+        font-size:smaller;
+    } 
+
+    #botonera-inf-resu .btn {
+        font-size: 2.5vw;
+    }
+
+    #botonera-inf-resu h5, #monto-total {
+        font-size: small;
+    }
+
+    #resumen-carro li p {
+        padding: 5.5px;
+    }
+
+   
+}
+
+
