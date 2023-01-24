@@ -26,6 +26,7 @@
   background-color: var(--master-color);
   position: relative;
   text-align: center;
+  margin-top: 81px;
 }
 .somos{
   margin: 0px auto;
