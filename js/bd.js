@@ -8,6 +8,7 @@ const productDB = [
         "dscto":"10%",
         "oferta": false,
         "img": "assets/img/01_atari.jpg",
+        "cantidad": 1,
         "otros": {
             "año": "1980",
         }
@@ -22,6 +23,7 @@ const productDB = [
         "dscto":"10%",
         "oferta": true,
         "img": "assets/img/12_tetris_game.jpg",
+        "cantidad": 1,
         "otros": {
             "año": "1990",
             "categoria": "puzzle"
@@ -37,6 +39,7 @@ const productDB = [
         "dscto":"15%",
         "oferta": true,
         "img": "assets/img/10_xbox.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Microsoft",
             "año": "2001"
@@ -45,13 +48,14 @@ const productDB = [
 
     {
         "id": "3",
-        "nombre": "Consola Sega",
+        "nombre": "Consola Sega Genesis",
         "codigo": "S456",
         "precio": 165000,
         "poferta": 148500,
         "dscto":"10%",
         "oferta": false,
         "img": "assets/img/08_sega.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Sega",
             "generación": "4ta"
@@ -60,13 +64,14 @@ const productDB = [
 
     {
         "id": "5",
-        "nombre": "Game Boy",
+        "nombre": "Consola Portátil Game Boy",
         "codigo": "G123",
         "precio": 90000,
         "poferta": 81000,
         "dscto":"10%",
         "oferta": true,
         "img": "assets/img/04_gameboy.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Nintendo",
             "generación": "8va"
@@ -75,13 +80,14 @@ const productDB = [
 
     {
         "id": "6",
-        "nombre": "Virtual Boy",
+        "nombre": "Consola Virtual Boy",
         "codigo": "V456",
         "precio": 350000,
         "poferta": 315000,
         "dscto":"10%",
         "oferta": false,
         "img": "assets/img/06_virtualboy.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Nintendo",
             "generación": "1era"
@@ -90,13 +96,14 @@ const productDB = [
 
     {
         "id": "7",
-        "nombre": "Cartucho Juego Tetris | NES",
+        "nombre": "Cartucho Juego Tetris NES",
         "codigo": "J789",
         "precio": 30000,
         "poferta": 24000,
         "dscto":"20%",
         "oferta": true,
         "img": "assets/img/05_tetris.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Atari",
             "generación": "2da"
@@ -105,13 +112,14 @@ const productDB = [
 
     {
         "id": "8",
-        "nombre": "NES",
+        "nombre": "Consola NES",
         "codigo": "N123",
         "precio": 230000,
         "poferta": 197500,
         "dscto":"10%",
         "oferta": false,
         "img": "assets/img/09_nes.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Nintendo",
             "generación": "3ra"
@@ -120,13 +128,14 @@ const productDB = [
 
     {
         "id": "9",
-        "nombre": "SNES",
+        "nombre": "Consola SNES",
         "codigo": "S789",
         "precio": 220000,
         "poferta": 187000,
         "dscto":"10%",
         "oferta": false,
         "img": "assets/img/07_snes.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Nintendo",
             "generación": "4ta"
@@ -142,6 +151,7 @@ const productDB = [
         "dscto":"15%",
         "oferta": true,
         "img": "assets/img/03_walkman.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Sony",
             "generación": "1era"
@@ -157,21 +167,23 @@ const productDB = [
         "dscto":"10%",
         "oferta": false,
         "img": "assets/img/02_mac_.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Apple",
-            "generación": "1era"
+            "generación": "1era",
         }
     },
 
     {
         "id": "12",
-        "nombre": "Chrono Trigger Super Nintendo",
+        "nombre": "Chrono Trigger SNES",
         "codigo": "M456",
         "precio": 250000,
         "poferta": 175000,
         "dscto":"30%",
         "oferta": true,
         "img": "assets/img/11_chrono.jpg",
+        "cantidad": 1,
         "otros": {
             "fabricante": "Apple",
             "generación": "1era"

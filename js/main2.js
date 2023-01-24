@@ -52,7 +52,7 @@ function agregarCarrito(opcion) {
         listaProductos.push(productDB[opcion]);  
         
 
-        $('#resumen-carro').append('<li id="posicion-dropdown-'+opcion+'"><p id="nombre-li-'+opcion+'"></p><div id="cont-resu-carro"><i onclick="restarProducto('+opcion+')" class="fa-solid fa-square-minus fa-xl"></i><p class="contador-resu badge bg-dark" id="cant-resu-'+opcion+'">1</p><i onclick="sumarProducto('+opcion+')" class="fa-solid fa-square-plus fa-xl"></i></div></div><p class="precio-li" id="precio-li-'+opcion+'" ></p><div><i onclick="eliminarLinea('+opcion+')" class="fa-solid fa-trash icono-eliminar"></i></li>');
+        $('#resumen-carro').append('<li id="posicion-dropdown-'+opcion+'"><p id="nombre-li-'+opcion+'"></p><div id="cont-resu-carro"><i onclick="restarProducto('+opcion+')" class="fa-solid fa-square-minus fa-xl"></i><p class="contador-resu badge bg-dark" id="cant-resu-'+opcion+'">1</p><i class="fa-solid fa-square-plus fa-xl"></i></div></div><p class="precio-li" id="precio-li-'+opcion+'" ></p><div><i class="fa-solid fa-trash icono-eliminar"></i></li>');
        
         
     //Este condicional determina si el producto está en oferta o no para desplegar el precio.
@@ -65,20 +65,21 @@ function agregarCarrito(opcion) {
     //Si el producto es repetido, el contador aumenta en 1 unidad y lo vuelve a recalcular multiplicando por el precio y desplegando el nuevo precio en el documento.
     } else {
         console.log('producto repetido')
-        console.log('La posicion en el arreglo es '+listaProductos.indexOf(productDB[opcion]));
+        console.log(listaProductos.indexOf(productDB[opcion]));
         let posicionRepetido = listaProductos.indexOf(productDB[opcion]);
         listaProductos[posicionRepetido].cantidad++;
-        console.log('La nueva cantidad es '+listaProductos[posicionRepetido].cantidad);
+        console.log(listaProductos[posicionRepetido].cantidad)
         $('#cant-resu-'+opcion).html(listaProductos[posicionRepetido].cantidad);
         
         let precioResu = 0;
         if (productDB[opcion].oferta){
-            precioResu = listaProductos[posicionRepetido].poferta * listaProductos[posicionRepetido].cantidad;
-            $('#precio-li-'+opcion).html(formatoCL.format(precioResu));
+            precioResu = productDB[opcion].poferta * listaProductos[posicionRepetido].cantidad;
+            $('#precio-li-'+posicionRepetido).html(formatoCL.format(precioResu));
         } else {
-            precioResu = listaProductos[posicionRepetido].precio * listaProductos[posicionRepetido].cantidad;
-            $('#precio-li-'+opcion).html(formatoCL.format(precioResu));
+            precioResu = productDB[opcion].precio * listaProductos[posicionRepetido].cantidad;
+            $('#precio-li-'+posicionRepetido).html(formatoCL.format(precioResu));
         };
+    
     };
     
     $('#nombre-li-'+opcion).html(productDB[opcion].nombre);
@@ -110,9 +111,6 @@ function calcularMonto(){
     console.log(precioTotal);
 };
 
-
-//Función para eliminar una unidad de un producto
-
 function restarProducto(opcion){
     let posicion = listaProductos.indexOf(productDB[opcion]);
     console.log('La posicion de la cantidad a restar es '+posicion);
@@ -124,64 +122,12 @@ function restarProducto(opcion){
     if (listaProductos[posicion].cantidad == 0) {
         console.log('Se remueve este elemento');
         $('#posicion-dropdown-'+opcion).remove();
-        const listaProductosFiltrado = listaProductos.filter(producto => producto != productDB[opcion]);
-        listaProductos = listaProductosFiltrado;
     } else {
         $('#cant-resu-'+opcion).html(listaProductos[posicion].cantidad);
-
-        if (listaProductos[posicion].oferta){
-        $('#precio-li-'+opcion).html(formatoCL.format(listaProductos[posicion].poferta * listaProductos[posicion].cantidad));
-        } else {
-            $('#precio-li-'+opcion).html(formatoCL.format(listaProductos[posicion].precio * listaProductos[posicion].cantidad));
-        };
-    };
-    calcularMonto();
-};
-
-
-//Función para añadir una unidad de un producto
-
-function sumarProducto(opcion){
-    let posicion = listaProductos.indexOf(productDB[opcion]);
-    console.log('La posicion de la cantidad a sumar es '+posicion);
-    listaProductos[posicion].cantidad++;
-    console.log('La nueva cantidad es '+listaProductos[posicion].cantidad);
-    contadorCarrito = contadorCarrito + 1;
-    $('#cantidad-carro').html(contadorCarrito);
-    $('#cant-resu-'+opcion).html(listaProductos[posicion].cantidad);
-
-        if (listaProductos[posicion].oferta){
-            $('#precio-li-'+opcion).html(formatoCL.format(listaProductos[posicion].poferta * listaProductos[posicion].cantidad));
-        } else {
-            $('#precio-li-'+opcion).html(formatoCL.format(listaProductos[posicion].precio * listaProductos[posicion].cantidad));
-        };
-        calcularMonto();
-};
-
-
-//Función para eliminar todas las unidades de un producto
-function eliminarLinea(opcion){
-    const listaProductosFiltrado = listaProductos.filter(producto => producto != productDB[opcion]);
-    console.log(listaProductosFiltrado);
-    $('#posicion-dropdown-'+opcion).remove();
-    let posicion = listaProductos.indexOf(productDB[opcion]);
-    console.log(listaProductos[posicion].cantidad);
-    contadorCarrito = contadorCarrito - listaProductos[posicion].cantidad;
-    $('#cantidad-carro').html(contadorCarrito);
-
-    listaProductos = listaProductosFiltrado;
-    calcularMonto();
-};
-
-//Funcion para vaciar carrito
-function vaciarCarrito(){
-    contadorCarrito = 0;
-    $('#cantidad-carro').html(contadorCarrito);
-    for (let i=0;i <= productDB.length-1;i++){
-        $('#posicion-dropdown-'+i).remove();
     };
 
-    listaProductos = [];
     calcularMonto();
 };
 
+//Funcion para calcular precios y desplegarlos en el HTML
+function calcular();

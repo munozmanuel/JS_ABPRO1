@@ -23,7 +23,7 @@
     gap: 4px;
 }
 
-#posicion-dropdown {
+#resumen-carro li {
     display: grid;
     grid-template-columns: 3fr 0.5fr 1fr 0.2fr;
     width: 45w;
@@ -41,11 +41,27 @@
     text-align: left;
 }
 
-#posicion-dropdown p {
+#resumen-carro li p {
     margin:0;
     padding: 10px;
 }
 
-.icono-eliminar:hover {
+.icono-eliminar:hover , .fa-square-minus:hover , .fa-square-plus:hover{
     cursor: pointer;
+}
+
+#botonera-inf-resu {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.btn-outline-warning {
+   color: #fd7e14 !important;
+   border-color: #fd7e14 !important;
+}
+
+.btn-outline-warning:hover {
+    color: black !important;
+    border-color: black !important;
 }
