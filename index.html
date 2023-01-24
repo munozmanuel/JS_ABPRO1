@@ -21,17 +21,21 @@
 </head>
 
 <body>
+    
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning ">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!"><img src="/assets/img/retrogeek_blanco.png" width="250px"></a>
+            <a class="navbar-brand" href="/index.html">
+                <img class="navLogo" src="/assets/img/retrogeek_blanco.png" width="250px">
+                <!-- <img class="hoverImg" src="/assets/img/retrogeek.png" width="250px"> -->
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/somos.html">Somos</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
@@ -46,15 +50,16 @@
                     </li>
                 </ul>
                 <div class="nav-item dropdown">
-                    <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         <i class="bi-cart-fill me-1"></i>
                         Carro
                         <span id="cantidad-carro" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
-                     <div class="dropdown-menu dropdown-menu-lg-end contenedor-resumen">
+                    <div class="dropdown-menu dropdown-menu-lg-end contenedor-resumen">
                         <ul id="resumen-carro">
-<!--                     <li id="posicion-dropdown"><p id="nombre-li"></p><p id="precio-li" ></p><i class="fa-solid fa-trash icono-eliminar"></i></li> -->
-                           
+                            <!--                     <li id="posicion-dropdown"><p id="nombre-li"></p><p id="precio-li" ></p><i class="fa-solid fa-trash icono-eliminar"></i></li> -->
+
 
                         </ul>
                         <div id="botonera-inf-resu">
@@ -71,7 +76,8 @@
             </div>
         </div>
     </nav>
-    <div class="separador bg-primary">&nbsp;</div>
+    
+    <div class="separador1">&nbsp;</div>
     <!-- Header-->
 
     <div class="header">
@@ -97,14 +103,16 @@
     <!-- Section-->
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div id="contenedor-general" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div id="contenedor-general"
+                class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                 <!-- ----- CONTENEDOR 1 ----- -->
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-0" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"></div>
+                        <div id="etiqueta-oferta-0" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem"></div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-0" src="" alt="..."/>
+                        <img class="card-img-top" id="img-0" src="" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -117,7 +125,8 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button class="btn btn-outline-dark mt-auto" href="#" onclick="agregarCarrito(0)">Añadir al Carrito</button></div>
+                            <div class="text-center"><button class="btn btn-outline-dark mt-auto" href="#"
+                                    onclick="agregarCarrito(0)">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -125,9 +134,10 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-1" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-1" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-1" src="" alt="..."/>
+                        <img class="card-img-top" id="img-1" src="" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -140,17 +150,19 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(1)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(1)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 3 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 3 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-2" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-2" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-2" src="" alt="..."/>
+                        <img class="card-img-top" id="img-2" src="" alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -163,17 +175,20 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(2)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(2)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 4 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 4 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-3" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-3" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-3" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-3" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -186,7 +201,8 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(3)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(3)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -194,9 +210,11 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-4" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-4" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-4" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-4" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -209,7 +227,8 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(4)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(4)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -217,9 +236,11 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-5" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-5" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-5" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-5" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -232,7 +253,8 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(5)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(5)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
@@ -240,9 +262,11 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-6" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-6" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-6" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-6" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -255,17 +279,20 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(6)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(6)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 8 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 8 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-7" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-7" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-7" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-7" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -278,17 +305,20 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(7)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(7)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 9 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 9 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-8" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-8" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-8" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-8" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -301,17 +331,20 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(8)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(8)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 10 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 10 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-9" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-9" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-9" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-9" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -324,17 +357,20 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(9)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(9)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 11 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 11 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-10" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-10" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-10" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-10" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -347,17 +383,20 @@
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><button onclick="agregarCarrito(10)" class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
+                            <div class="text-center"><button onclick="agregarCarrito(10)"
+                                    class="btn btn-outline-dark mt-auto" href="#">Añadir al Carrito</button></div>
                         </div>
                     </div>
                 </div>
-                 <!-- ----- CONTENEDOR 12 ----- -->
-                 <div class="col mb-5">
+                <!-- ----- CONTENEDOR 12 ----- -->
+                <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Sale badge-->
-                        <div id="etiqueta-oferta-11" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
+                        <div id="etiqueta-oferta-11" class="badge bg-dark text-white position-absolute"
+                            style="top: 0.5rem; right: 0.5rem">Oferta</div>
                         <!-- Product image-->
-                        <img class="card-img-top" id="img-11" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..."/>
+                        <img class="card-img-top" id="img-11" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                            alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -378,14 +417,36 @@
             </div>
         </div>
     </section>
+    <!-- <div class="separadorBajada">&nbsp;</div> -->
     <!-- Footer-->
-    <footer class="py-5 bg-warning">
-        <div class="containe ">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+<img class="footerWave" src="/assets/svg/wave (3).svg" alt="">
+    
+    <footer class="pieDePagina">
+        <div>
+            <h2>Somos</h2>
+            <img src="/assets/img/retrogeek.png" width="200px" alt="">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni laborum tempore iure amet quos quibusdam
+            </p>
+        </div>
+        <div>
+            <h2>Ubícanos</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni laborum tempore iure amet quos quibusdam
+            </p>
+        </div>
+        <div>
+            <h2>Redes Sociales</h2>            
+                <img src="/assets/icons/fb.png" width="20px" alt="">
+                <img src="/assets/icons/ig.png" width="20px" alt="">
+            
         </div>
     </footer>
+    <div class="separadorBajada">&nbsp;</div>
+    <div class="bajada">
+        <p>2023 - RetroGeek - Bootcamp TalentoDigital </p>
+    </div>
 
     
+
     <!-- JQuery -->
     <script src="js/lib/jquery-3.6.3.min.js"></script>
     <!-- Bootstrap core JS-->
