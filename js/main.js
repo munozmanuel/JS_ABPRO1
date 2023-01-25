@@ -6,12 +6,22 @@ const formatoCL = new Intl.NumberFormat("es-CL", {
     useGrouping: true,
 });
 
+//Esta función carga las cartas vacías y las inserta en el "#contenedor-principal" del index.
+$(document).ready(function() {
+        console.log('se está cargando la tienda');
+        $('#contenedor-principal').load('./tienda.html' , () => {  //Función .load permite la ejecución secuencial de elementos
+            crearCards();
+        }); 
+
+});
+
 //Esta función evita que el dropdown se cierre el clickear adentro de él
 $('.dropdown-menu').on('click', function (e) {
     e.stopPropagation();});
 
 // Función para crear las cards de la tienda
-$( document ).ready(function() {
+function crearCards() {
+
     for (let i=0;i<productDB.length;i++){
         $("#img-"+i).attr('src',productDB[i].img);
         // document.getElementById('img-'+i).getAttribute('src') = productDB[i].img;
@@ -35,7 +45,7 @@ $( document ).ready(function() {
                     $("#precio-"+i).html(formatoCL.format(productDB[i].precio));
                 };
     };
-});
+};
 
 let contadorCarrito = 0;
 $('#cantidad-carro').html(contadorCarrito);
@@ -94,6 +104,7 @@ function agregarCarrito(opcion) {
 //Funcion para calcular los montos
 function calcularMonto(){
     let precioTotal = 0;
+    
     //Calcular total
     for (let i = 0;i <= listaProductos.length-1;i++) {
         if (listaProductos[i].oferta){
@@ -104,11 +115,20 @@ function calcularMonto(){
             let precioLista = (listaProductos[i].precio * listaProductos[i].cantidad);
             precioTotal = precioTotal + precioLista;
             console.log(precioLista);
-
         };
     };
     console.log(precioTotal);
     $('#monto-total').html(formatoCL.format(precioTotal));
+
+    precioConIva = precioTotal * 1.19;
+    $('#monto-con-iva').html(formatoCL.format(precioConIva));
+
+    if (precioTotal == 0){
+        $('#monto-total').html('');
+    }
+    if (precioConIva == 0){
+        $('#monto-con-iva').html('');
+    }
 };
 
 
@@ -186,3 +206,16 @@ function vaciarCarrito(){
     calcularMonto();
 };
 
+
+//Funcion para cargar el html sobre el main actual
+function cargarVentanaPago() {
+    console.log('voy a pagar');
+    $('#contenedor-principal').load('./indexcarro.html .contenedor-carro');
+
+}
+
+function regresaraTienda() {
+    $('#contenedor-principal').load('./tienda.html' , () => {  //Función .load permite la ejecución secuencial de elementos
+        crearCards();
+    }); 
+};

@@ -1,3 +1,5 @@
+//Función de media query en JS, 
+
 function mediaQueryJS(maxWidth) {
     if (maxWidth.matches) { 
      $('#btn-vaciar').html('<i style="padding-right: 4px;" class="fa-solid fa-trash"></i>');
@@ -31,7 +33,7 @@ function mediaQueryJS(maxWidth) {
         $('#secc-total').remove();
         $('#secc-vaciar').remove();
         $('#botonera-inf-resu').append('<div id="secc-vaciar"><button onclick="vaciarCarrito()" id="btn-vaciar" class="btn btn-outline-warning"><i style="padding-right: 4px;" class="fa-solid fa-trash"></i>Vaciar Carrito</button></div>');
-        $('#botonera-inf-resu').append('<div id="secc-total"><h5>Total:<span id="monto-total"></span></h4></div>');
+        $('#botonera-inf-resu').append('<div id="secc-total"><p>Total Neto:<span id="monto-total"></span></p><h5>Total: <span id="monto-con-iva"></span></h5></div>');
         calcularMonto();
 
        
