@@ -6,7 +6,7 @@ const productDB = [
         "precio": 90000,
         "poferta": 81000,
         "dscto":"10%",
-        "oferta": true,
+        "oferta": false,
         "img": "assets/img/01_atari.jpg",
         "cantidad": 1,
         "otros": {
