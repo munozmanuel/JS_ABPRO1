@@ -1,3 +1,6 @@
+
+//El atributo oferta puede ser ajustado como true o false y esto desencadenará algunos cambios en el documento y en la interacción del objeto en el main.js
+
 const productDB = [
     {
         "id": "0",
@@ -6,7 +9,7 @@ const productDB = [
         "precio": 90000,
         "poferta": 81000,
         "dscto":"10%",
-        "oferta": false,
+        "oferta": true,
         "img": "assets/img/01_atari.jpg",
         "cantidad": 1,
         "otros": {
@@ -21,7 +24,7 @@ const productDB = [
         "precio": 5000,
         "poferta": 4500,
         "dscto":"10%",
-        "oferta": true,
+        "oferta": false,
         "img": "assets/img/12_tetris_game.jpg",
         "cantidad": 1,
         "otros": {
