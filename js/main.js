@@ -120,14 +120,28 @@ function calcularMonto(){
     console.log(precioTotal);
     $('#monto-total').html(formatoCL.format(precioTotal));
 
-    precioConIva = precioTotal * 1.19;
+    
+    let precioConIva = precioTotal * 1.19;
     $('#monto-con-iva').html(formatoCL.format(precioConIva));
+
+    let valorDespacho = 0;
+    if (precioConIva < 100000) {
+        valorDespacho = precioConIva * 0.05;
+        $('#despacho-total').html(formatoCL.format(valorDespacho));
+    } else {
+        valorDespacho = 'Gratis';
+        $('#despacho-total').html(valorDespacho);
+    }
+    
 
     if (precioTotal == 0){
         $('#monto-total').html('');
     }
     if (precioConIva == 0){
         $('#monto-con-iva').html('');
+    }
+    if (valorDespacho == 0){
+        $('#despacho-total').html('');
     }
 };
 
