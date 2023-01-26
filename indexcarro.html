@@ -16,52 +16,63 @@
 
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="nav-item dropdown">
-                        <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi-cart-fill me-1"></i>
-                            Carro
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
-                        </button>
-                         <div class="dropdown-menu dropdown-menu-lg-end">
-                            <ul id="resumen-carro">
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
-                                <li id="posicion-dropdown"><p>Producto ficticio</p> <p style="color:blue">$29.990</p><i onclick="" class="fa-solid fa-trash icono-eliminar"></i></li>
+            <!-- Navigation-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
+      <div class="container px-4 px-lg-5">
+          <a class="navbar-brand" href="/index.html">
+              <img class="navLogo" src="/assets/img/retrogeek_blanco.png" width="250px">
+              <!-- <img class="hoverImg" src="/assets/img/retrogeek.png" width="250px"> -->
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.html">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/somos.html">Somos</a></li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#!">All Products</a></li>
+                          <li>
+                              <hr class="dropdown-divider" />
+                          </li>
+                          <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                          <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                      </ul>
+                  </li>
+              </ul>
+              <div class="nav-item dropdown">
+                  <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <i class="bi-cart-fill me-1"></i>
+                      Carro
+                      <span id="cantidad-carro" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-lg-end contenedor-resumen">
+                      <ul id="resumen-carro">
+                          <!--                     <li id="posicion-dropdown"><p id="nombre-li"></p><p id="precio-li" ></p><i class="fa-solid fa-trash icono-eliminar"></i></li> -->
 
-                            </ul>
-                            <a href="#" style="display: flex; justify-content: center; width: 100%; padding-bottom: 1vw;">Ir al Carrito</a>
-                         </div>
-                           
-                    </div>
-                   
-                </div>
-            </div>
-        </nav>
+
+                      </ul>
+                      <div id="botonera-inf-resu">
+                          <div>
+                              <a href="#" class="btn btn-outline-dark"><i class="bi-cart-fill me-1"></i>Ir al Carrito</a>
+                          </div>
+                          <div id="secc-vaciar">
+                              <button onclick="vaciarCarrito()" id="btn-vaciar" class="btn btn-outline-warning"><i style="padding-right: 4px;" class="fa-solid fa-trash"></i>Vaciar Carrito</button>
+                          </div>
+                          <div id="secc-total">
+                              <h5>Total:<span id="monto-total"></span></h4>
+                          </div>
+                      </div>
+                   </div>
+                     
+              </div>
+          </div>
+      </div>
+  </nav>
 
 
 <main>
