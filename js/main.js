@@ -6,6 +6,7 @@ const formatoCL = new Intl.NumberFormat("es-CL", {
     useGrouping: true,
 });
 
+
 //Esta función carga las cartas vacías y las inserta en el "#contenedor-principal" del index.
 $(document).ready(function() {
         console.log('se está cargando la tienda');
@@ -110,9 +111,16 @@ function agregarCarrito(opcion) {
    
 }
 
+let precioTotal = 0;
+let precioConIva = 0;
+let valorDespacho = 0;
+
 //Funcion para calcular los montos
 function calcularMonto(){
-    let precioTotal = 0;
+    
+    precioTotal = 0;
+    precioConIva = 0;
+    valorDespacho = 0;
     
     //Calcular total
     for (let i = 0;i <= listaProductos.length-1;i++) {
@@ -130,10 +138,9 @@ function calcularMonto(){
     $('#monto-total').html(formatoCL.format(precioTotal));
 
     
-    let precioConIva = precioTotal * 1.19;
+    precioConIva = precioTotal * 1.19;
     $('#monto-con-iva').html(formatoCL.format(precioConIva));
 
-    let valorDespacho = 0;
     if (precioConIva < 100000) {
         valorDespacho = precioConIva * 0.05;
         $('#despacho-total').html(formatoCL.format(valorDespacho));
@@ -248,12 +255,14 @@ function cargarVentanaPago() {
 }
 
 function regresaraTienda() {
-    $('#contenedor-principal').load('./tienda.html' , () => {  //Función .load permite la ejecución secuencial de elementos
+    $('#contenedor-principal').load('./tienda.html' , () => {  //Función .load permite la ejecución secuencial de elementos através del parametro funcion () => {}
         crearCards();
     }); 
 };
 
 function renderResumen() {
+
+
     if (document.querySelector('#lista-indexcarro') != null){
             document.querySelector('#lista-indexcarro').innerHTML = ('');
     };
@@ -282,5 +291,34 @@ function renderResumen() {
 
     if (document.querySelector('.btn-num-tucarro') != null){
         document.querySelector('.btn-num-tucarro').innerHTML = (contadorCarrito);
+        console.log(precioTotal);
+        console.log(valorDespacho);
+        console.log(precioConIva);
+        document.getElementById('indexcarro-totalneto').innerHTML = (formatoCL.format(precioTotal));
+        document.getElementById('indexcarro-total').innerHTML = (formatoCL.format(precioConIva));
+
+        if (isNaN(valorDespacho)){
+            document.getElementById('indexcarro-despacho').innerHTML = (valorDespacho);
+        } else {
+            document.getElementById('indexcarro-despacho').innerHTML = (formatoCL.format(valorDespacho));
+        }
     };
 };
+
+//Funcion para validar formulario
+function validarForm(){
+    const forms = document.querySelectorAll('.needs-validation');
+
+    console.log(forms);
+    let estado = false; 
+
+    forms.forEach(form => {
+        if (form.checkValidity()) { 
+            estado = true;
+        };
+
+        form.classList.add('was-validated');
+    });
+
+    return estado;
+};   

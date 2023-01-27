@@ -16,64 +16,6 @@
 
     </head>
     <body>
-            <!-- Navigation-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-warning">
-      <div class="container px-4 px-lg-5">
-          <a class="navbar-brand" href="/index.html">
-              <img class="navLogo" src="/assets/img/retrogeek_blanco.png" width="250px">
-              <!-- <img class="hoverImg" src="/assets/img/retrogeek.png" width="250px"> -->
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="/index.html">Inicio</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/somos.html">Somos</a></li>
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#!">All Products</a></li>
-                          <li>
-                              <hr class="dropdown-divider" />
-                          </li>
-                          <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                          <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                      </ul>
-                  </li>
-              </ul>
-              <div class="nav-item dropdown">
-                  <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <i class="bi-cart-fill me-1"></i>
-                      Carro
-                      <span id="cantidad-carro" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                  </button>
-                  <div class="dropdown-menu dropdown-menu-lg-end contenedor-resumen">
-                      <ul id="resumen-carro">
-                          <!--                     <li id="posicion-dropdown"><p id="nombre-li"></p><p id="precio-li" ></p><i class="fa-solid fa-trash icono-eliminar"></i></li> -->
-
-
-                      </ul>
-                      <div id="botonera-inf-resu">
-                          <div>
-                              <a href="#" class="btn btn-outline-dark"><i class="bi-cart-fill me-1"></i>Ir al Carrito</a>
-                          </div>
-                          <div id="secc-vaciar">
-                              <button onclick="vaciarCarrito()" id="btn-vaciar" class="btn btn-outline-warning"><i style="padding-right: 4px;" class="fa-solid fa-trash"></i>Vaciar Carrito</button>
-                          </div>
-                          <div id="secc-total">
-                              <h5>Total:<span id="monto-total"></span></h4>
-                          </div>
-                      </div>
-                   </div>
-                     
-              </div>
-          </div>
-      </div>
-  </nav>
-
 
 <main>
         <!-- <body class="bg-light"> -->
@@ -102,15 +44,29 @@
                         <input type="text" class="form-control" placeholder="Código descuento">
                         <button type="submit" class="btn btn-secondary">Validar</button>
                       </div>
+                      <div class="input-group totales-indexcarro">
+                      <div class="item-listado item-listado-mute">
+                        <h6>Total Neto: </h6>
+                        <h6 id="indexcarro-totalneto"></h6>
+                      </div>
+                      <div class="item-listado item-listado-mute">
+                        <h6>Total Despacho: </h6> 
+                        <h6 id="indexcarro-despacho"></h6>
+                      </div>
+                      <div class="item-listado">  
+                        <h5>Total (IVA incluido): </h5>
+                        <h5 id="indexcarro-total"></h5>
+                      </div>
+                      </div>
                     </form>
                   </div>
-                  <div class="datousuario col-md-7 col-lg-8" class="datoscompra">
+                  <div class="datousuario col-md-7 col-lg-8">
                     <h4 class="mb-3">Datos de compra</h4>
                     <form class="needs-validation" novalidate>
                       <div class="row g-3">
                         <div class="col-sm-6">
                           <label for="firstName" class="form-label">Nombres</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                          <input type="text" class="form-control" id="firstName" placeholder="" value="" name="name" required>
                           <div class="invalid-feedback">
                             Nombres son requeridos.
                           </div>
@@ -118,7 +74,7 @@
       
                         <div class="col-sm-6">
                           <label for="lastName" class="form-label">Apellidos</label>
-                          <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                          <input type="text" class="form-control" id="lastName" placeholder="" value="" name="last" required>
                           <div class="invalid-feedback">
                             Apellidos son requeridos.
                           </div>
@@ -126,13 +82,13 @@
       
                         <div class="col-sm-12">
                           <label for="carnet" class="form-label">Cédula de Identidad</label>
-                          <input type="text" class="form-control" id="carnet" placeholder="" value="" required>
+                          <input type="text" class="form-control" id="carnet" placeholder="" value="" name="rut" required>
                           <div class="invalid-feedback">
                             Nombres son requeridos.
                           </div>
                         </div>
       
-                        <div class="col-12">
+                        <!-- <div class="col-12">
                           <label for="username" class="form-label">Usuario</label>
                           <div class="input-group has-validation input-usuario">
                             <span class="input-group-text">@</span>
@@ -141,26 +97,26 @@
                               Tu usuario es requerido.
                             </div>
                           </div>
-                        </div>
+                        </div> -->
       
                         <div class="col-12">
-                          <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-                          <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                          <label for="email" class="form-label">Email</label>
+                          <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
                           <div class="invalid-feedback">
-                            Please enter a valid email address for shipping updates.
+                            Ingresa una dirección de correo válido.
                           </div>
                         </div>
       
                         <div class="col-12">
                           <label for="address" class="form-label">Dirección</label>
-                          <input type="text" class="form-control" id="address" placeholder="Colón 2020" required>
+                          <input type="text" class="form-control" name="address" placeholder="Calle 1234. Localidad" required>
                           <div class="invalid-feedback">
                             Ingrese su dirección.
                           </div>
                         </div>
       
                         <div class="col-12">
-                          <label for="address2" class="form-label">Teléfono <span class="text-muted">(Optional)</span></label>
+                          <label for="address2" class="form-label">Teléfono <span class="text-muted">(Opcional)</span></label>
                           <input type="number" class="form-control" id="phone" placeholder="Número de teléfono">
                         </div>
       
@@ -264,8 +220,8 @@
       
                       <hr class="my-4">
       
-                      <button class="w-100 btn btn-primary btn-lg" type="submit" id="btnvalidac">Continúa la validación</button>
                     </form>
+                    <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="validarForm()" id="btnvalidac">Pagar</button>
                   </div>
                 </div>
               </div>
@@ -273,10 +229,7 @@
 </main>
 
 
-        <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
-        </footer>
+
         <!-- JQuery -->
         <script src="js/lib/jquery-3.6.3.min.js"></script>
         <!-- Bootstrap core JS-->
