@@ -1,0 +1,15 @@
+.carrototal {
+    width: 97%;
+    margin: 0;
+    padding-left: 5vw;
+}
+
+.contenedorbg {
+    justify-content: center;
+    align-items: center ;
+
+}
+
+.list-group-item {
+   justify-content: space-between;
+}

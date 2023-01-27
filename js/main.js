@@ -24,7 +24,6 @@ function crearCards() {
 
     for (let i=0;i<productDB.length;i++){
         $("#img-"+i).attr('src',productDB[i].img);
-        // document.getElementById('img-'+i).getAttribute('src') = productDB[i].img;
         $("#titulo-"+i).html(productDB[i].nombre);
        
         
@@ -60,10 +59,20 @@ function agregarCarrito(opcion) {
     if (listaProductos.indexOf(productDB[opcion]) === -1) {
         console.log('producto no repetido');
         listaProductos.push(productDB[opcion]);  
-        
-
-        $('#resumen-carro').append('<li id="posicion-dropdown-'+opcion+'"><p id="nombre-li-'+opcion+'"></p><div id="cont-resu-carro"><i onclick="restarProducto('+opcion+')" class="fa-solid fa-square-minus fa-xl"></i><p class="contador-resu badge bg-dark" id="cant-resu-'+opcion+'">1</p><i onclick="sumarProducto('+opcion+')" class="fa-solid fa-square-plus fa-xl"></i></div></div><p class="precio-li" id="precio-li-'+opcion+'" ></p><div><i onclick="eliminarLinea('+opcion+')" class="fa-solid fa-trash icono-eliminar"></i></li>');
        
+        $('#resumen-carro').append(`
+        <li id="posicion-dropdown-${opcion}">
+            <p id="nombre-li-${opcion}"></p>
+            <div id="cont-resu-carro">
+                <i onclick="restarProducto(${opcion})" class="fa-solid fa-square-minus fa-xl"></i>
+                <p class="contador-resu badge bg-dark" id="cant-resu-${opcion}">1</p>
+                <i onclick="sumarProducto(${opcion})" class="fa-solid fa-square-plus fa-xl"></i>
+            </div>
+                <p class="precio-li" id="precio-li-${opcion}"></p>
+                <div><i onclick="eliminarLinea(${opcion})" class="fa-solid fa-trash icono-eliminar"></i></div>
+        </li>
+        `);
+
         
     //Este condicional determina si el producto está en oferta o no para desplegar el precio.
     if (productDB[opcion].oferta){
@@ -171,6 +180,7 @@ function restarProducto(opcion){
         };
     };
     calcularMonto();
+    renderResumen();
 };
 
 
@@ -191,6 +201,7 @@ function sumarProducto(opcion){
             $('#precio-li-'+opcion).html(formatoCL.format(listaProductos[posicion].precio * listaProductos[posicion].cantidad));
         };
         calcularMonto();
+        renderResumen();
 };
 
 
@@ -206,6 +217,7 @@ function eliminarLinea(opcion){
 
     listaProductos = listaProductosFiltrado;
     calcularMonto();
+    renderResumen();
 };
 
 //Funcion para vaciar carrito
@@ -218,18 +230,57 @@ function vaciarCarrito(){
 
     listaProductos = [];
     calcularMonto();
+    renderResumen();
 };
 
 
 //Funcion para cargar el html sobre el main actual
 function cargarVentanaPago() {
     console.log('voy a pagar');
-    $('#contenedor-principal').load('./indexcarro.html .contenedor-carro');
+    $('#contenedor-principal').load('./indexcarro.html .contenedor-carro' , () => {
+        renderResumen();
+    });
 
+    $('.dropdown-toggle').removeClass('show');
+    $('.dropdown-toggle').attr('aria-expanded' , 'false');
+    $('.dropdown-menu').removeClass('show');
+    
 }
 
 function regresaraTienda() {
     $('#contenedor-principal').load('./tienda.html' , () => {  //Función .load permite la ejecución secuencial de elementos
         crearCards();
     }); 
+};
+
+function renderResumen() {
+    if (document.querySelector('#lista-indexcarro') != null){
+            document.querySelector('#lista-indexcarro').innerHTML = ('');
+    };
+
+    listaProductos.forEach(prod => {
+        if (prod.oferta){
+            prod.precioF = (prod.poferta * prod.cantidad);
+            console.log('La variable precioF es: '+prod.precioF);
+        } else {
+            prod.precioF = (prod.precio * prod.cantidad);
+            console.log('La variable precioF es: '+prod.precioF);
+        };
+    });
+    
+
+    listaProductos.forEach(prod => {
+        $('#lista-indexcarro').append(`
+        <li class="list-group-item d-flex justify-content-betweenlh-sm">
+        <div>
+        <h6 class="my-0" id="index-carro-nombre-item">${prod.nombre}</h6><small class="text-muted" id="index-carro-cantidad">Cod. ${prod.codigo} x ${prod.cantidad} unidad(es)</small>
+        </div>
+        <span class="text-muted" id="index-carro-precio">${formatoCL.format(prod.precioF)}</span></li>`)
+
+        
+    });
+
+    if (document.querySelector('.btn-num-tucarro') != null){
+        document.querySelector('.btn-num-tucarro').innerHTML = (contadorCarrito);
+    };
 };
