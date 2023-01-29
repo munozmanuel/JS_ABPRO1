@@ -116,8 +116,14 @@
                         </div>
       
                         <div class="col-12">
-                          <label for="address2" class="form-label">Teléfono <span class="text-muted">(Opcional)</span></label>
-                          <input type="number" class="form-control" id="fono-form" placeholder="Número de teléfono">
+                          <label for="username" class="form-label">Teléfono</label>
+                          <div class="input-group has-validation">
+                            <span class="input-group-text">+56</span>
+                              <input type="text" class="form-control" id="fono-form" placeholder="Número de teléfono" required>
+                              <div class="invalid-feedback">
+                                Ingresa un número de teléfono.
+                              </div>
+                          </div>
                         </div>
       
                         <div class="col-md-5">
