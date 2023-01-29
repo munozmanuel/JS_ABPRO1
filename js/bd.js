@@ -36,7 +36,7 @@ const productDB = [
     {
         "id": "2",
         "nombre": "Xbox Classic",
-        "codigo": "XBX",
+        "codigo": "XBX0",
         "precio": 300000,
         "poferta": 255000,
         "dscto":"15%",
@@ -68,7 +68,7 @@ const productDB = [
     {
         "id": "5",
         "nombre": "Consola Portátil Game Boy",
-        "codigo": "G123",
+        "codigo": "GB02",
         "precio": 90000,
         "poferta": 81000,
         "dscto":"10%",
@@ -84,7 +84,7 @@ const productDB = [
     {
         "id": "6",
         "nombre": "Consola Virtual Boy",
-        "codigo": "V456",
+        "codigo": "VBOY",
         "precio": 350000,
         "poferta": 315000,
         "dscto":"10%",
@@ -100,7 +100,7 @@ const productDB = [
     {
         "id": "7",
         "nombre": "Cartucho Juego Tetris NES",
-        "codigo": "J789",
+        "codigo": "SN08",
         "precio": 30000,
         "poferta": 24000,
         "dscto":"20%",
@@ -116,7 +116,7 @@ const productDB = [
     {
         "id": "8",
         "nombre": "Consola NES",
-        "codigo": "N123",
+        "codigo": "NES0",
         "precio": 230000,
         "poferta": 197500,
         "dscto":"10%",
@@ -132,7 +132,7 @@ const productDB = [
     {
         "id": "9",
         "nombre": "Consola SNES",
-        "codigo": "S789",
+        "codigo": "SNE5",
         "precio": 220000,
         "poferta": 187000,
         "dscto":"10%",
@@ -164,7 +164,7 @@ const productDB = [
     {
         "id": "11",
         "nombre": "Apple Macintosh 1984",
-        "codigo": "M456",
+        "codigo": "MA84",
         "precio": 300000,
         "poferta": 255000,
         "dscto":"10%",
@@ -180,7 +180,7 @@ const productDB = [
     {
         "id": "12",
         "nombre": "Chrono Trigger SNES",
-        "codigo": "M456",
+        "codigo": "SN14",
         "precio": 250000,
         "poferta": 175000,
         "dscto":"30%",

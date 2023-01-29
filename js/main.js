@@ -145,7 +145,9 @@ function calcularMonto(){
 
     if (precioConIva < 100000) {
         valorDespacho = precioConIva * 0.05;
+        precioConIva = precioConIva + valorDespacho;
         $('#despacho-total').html(formatoCL.format(valorDespacho));
+        $('#monto-con-iva').html(formatoCL.format(precioConIva));
     } else {
         valorDespacho = 'Gratis';
         $('#despacho-total').html(valorDespacho);
@@ -341,7 +343,7 @@ function validarForm(){
 
 
 // {{{ BETA }}}  En esta función almacenamos los datos si es que el cliente checkeó la casilla de "#Guardar Información", adicionalmente enviamos la información del cliente y los datos de la compra realizada a nuestra base de datos.
-function almacenarDatos () {
+function almacenarDatos() {
     if (validarForm()){
         if (listaProductos != 0) {
             // console.log('Se ejecuta el script');
@@ -383,7 +385,42 @@ function almacenarDatos () {
     } else {
         // console.log('no se puede ejecutar porque no se validó');
     }
-}
+};
+
+function enviarCorreo() {
+    if (validarForm()){
+        if (listaProductos != 0) {
+            let num_tarjeta = document.querySelector('#cc-number').value;
+
+            var params = {
+                from_name : "Retrogeek",
+                email_id : "ventas.retrogeek@gmail.com",
+                user_name : document.querySelector('#nombre-form').value,
+                user_lastname : document.querySelector('#apellido-form').value,
+                user_email : document.querySelector('#email-form').value,
+                user_fono : document.querySelector('#fono-form').value,
+                user_direccion : document.querySelector('#direccion-form').value,
+                user_pais : document.querySelector('#pais-form').value,
+                user_region: document.querySelector('#region-form').value,
+                tabla_ql : document.querySelector('#lista-indexcarro').innerHTML,
+                user_total: formatoCL.format(precioConIva),
+                user_tarjeta: num_tarjeta.substring(num_tarjeta.length-4,num_tarjeta.length),
+            }
+            emailjs.send("service_r3trom4il", "template_8fx59a5", params).then(function (res) {
+                console.log('Mail enviado' + res.status);
+            });
+        };
+    };
+
+};
+
+
+// {{ BETA }} Boton para concretar la compra.
+function pagarCarrito() {
+    almacenarDatos();
+    enviarCorreo();
+
+};
 
 //Lista de referencias al documento: FORMULARIO
 // const nombreForm = document.querySelector('#nombre-form');
