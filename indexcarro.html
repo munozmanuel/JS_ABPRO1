@@ -65,8 +65,8 @@
                     <form class="needs-validation" novalidate>
                       <div class="row g-3">
                         <div class="col-sm-6">
-                          <label for="firstName" class="form-label">Nombres</label>
-                          <input type="text" class="form-control" id="firstName" placeholder="" value="" name="name" required>
+                          <label for="firstName" class="form-label">Nombre</label>
+                          <input type="text" class="form-control" id="nombre-form" placeholder="" value="" name="name" required>
                           <div class="invalid-feedback">
                             Nombres son requeridos.
                           </div>
@@ -74,15 +74,15 @@
       
                         <div class="col-sm-6">
                           <label for="lastName" class="form-label">Apellidos</label>
-                          <input type="text" class="form-control" id="lastName" placeholder="" value="" name="last" required>
+                          <input type="text" class="form-control" id="apellido-form" placeholder="" value="" name="last" required>
                           <div class="invalid-feedback">
                             Apellidos son requeridos.
                           </div>
                         </div>
       
                         <div class="col-sm-12">
-                          <label for="carnet" class="form-label">Cédula de Identidad</label>
-                          <input type="text" class="form-control" id="carnet" placeholder="" value="" name="rut" required>
+                          <label for="carnet" class="form-label">RUT</label>
+                          <input type="text" class="form-control" id="rut-form" placeholder="" value="" name="rut" required>
                           <div class="invalid-feedback">
                             Nombres son requeridos.
                           </div>
@@ -101,7 +101,7 @@
       
                         <div class="col-12">
                           <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+                          <input type="email" class="form-control" name="email" placeholder="you@example.com" id="email-form" required>
                           <div class="invalid-feedback">
                             Ingresa una dirección de correo válido.
                           </div>
@@ -109,7 +109,7 @@
       
                         <div class="col-12">
                           <label for="address" class="form-label">Dirección</label>
-                          <input type="text" class="form-control" name="address" placeholder="Calle 1234. Localidad" required>
+                          <input type="text" class="form-control" name="address" placeholder="Calle 1234. Comuna" id="direccion-form" required>
                           <div class="invalid-feedback">
                             Ingrese su dirección.
                           </div>
@@ -117,12 +117,12 @@
       
                         <div class="col-12">
                           <label for="address2" class="form-label">Teléfono <span class="text-muted">(Opcional)</span></label>
-                          <input type="number" class="form-control" id="phone" placeholder="Número de teléfono">
+                          <input type="number" class="form-control" id="fono-form" placeholder="Número de teléfono">
                         </div>
       
                         <div class="col-md-5">
                           <label for="country" class="form-label">País</label>
-                          <select class="form-select" id="country" required>
+                          <select class="form-select" id="pais-form" required>
                             <option value=""></option>
                             <option>Chile</option>
                           </select>
@@ -133,7 +133,7 @@
       
                         <div class="col-md-4">
                           <label for="state" class="form-label">Región</label>
-                          <select class="form-select" id="region" required>
+                          <select class="form-select" id="region-form" required>
                             <option value=""></option>
                             <option>Arica y Parinacota</option>
                             <option>Tarapacá</option>
@@ -160,12 +160,6 @@
                       </div>
       
                       <hr class="my-4">
-      
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="same-address">
-                        <label class="form-check-label" for="same-address">La dirección de envío es la misma que la dirección
-                          de facturación</label>
-                      </div>
       
                       <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="save-info">
@@ -221,7 +215,7 @@
                       <hr class="my-4">
       
                     </form>
-                    <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="validarForm()" id="btnvalidac">Pagar</button>
+                    <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="almacenarDatos()" id="btnvalidac">Pagar</button>
                   </div>
                 </div>
               </div>
@@ -236,4 +230,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script> 
+        <script src="js/main.js"></script> 
+
     </body>
