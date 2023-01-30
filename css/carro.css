@@ -4,6 +4,10 @@
 
 .contenedor-resumen {
     min-width: 40rem !important;
+    background-image: url(/assets/svg/wave\ \(3\).svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: ;
 }
 
 #iconos-res-carro {
