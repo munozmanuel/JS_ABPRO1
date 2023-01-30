@@ -388,7 +388,14 @@ function almacenarDatos() {
 };
 
 function enviarCorreo() {
+    let userDespacho = 0;
     if (validarForm()){
+        if (valorDespacho != 'Gratis'){
+           userDespacho = formatoCL.format(valorDespacho);
+        } else {
+           userDespacho = valorDespacho;
+        };
+
         if (listaProductos != 0) {
             let num_tarjeta = document.querySelector('#cc-number').value;
 
@@ -403,7 +410,10 @@ function enviarCorreo() {
                 user_pais : document.querySelector('#pais-form').value,
                 user_region: document.querySelector('#region-form').value,
                 tabla_ql : document.querySelector('#lista-indexcarro').innerHTML,
-                user_total: formatoCL.format(precioConIva),
+                user_total : formatoCL.format(precioConIva),
+                user_bruto : formatoCL.format(precioTotal),
+                user_iva : formatoCL.format(precioTotal*0.19),
+                user_despacho : userDespacho,
                 user_tarjeta: num_tarjeta.substring(num_tarjeta.length-4,num_tarjeta.length),
             }
             emailjs.send("service_r3trom4il", "template_8fx59a5", params).then(function (res) {
