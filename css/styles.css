@@ -5310,9 +5310,6 @@ fieldset:disabled .btn {
 .card img:hover {
   animation-name: foto;
   animation-duration: .8s;
-    /* transform: scale(.9);
-
-    transition: .5s; */
 }
 
 
