@@ -4608,7 +4608,11 @@ fieldset:disabled .btn {
 
   
 }
+.contenedor-carro{
+  margin-top: 20px;
+  padding: 50px;
 
+}
 .navbar>.container,
 .navbar>.container-fluid,
 .navbar>.container-sm,

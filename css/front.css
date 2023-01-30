@@ -50,6 +50,9 @@
   background-color: lightblue;
 }
 
+.header{
+  height: "100px";
+}
 .header img {
 
   width: 100%;
@@ -160,7 +163,7 @@
 
 
 .footerWave {
-  background-color: ;
+
 
 
 }
