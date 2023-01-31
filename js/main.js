@@ -1,12 +1,13 @@
-
-
-
 //Funcion para añadir formato CLP a los datos numéricos
 const formatoCL = new Intl.NumberFormat("es-CL", {
     style: "currency",
     currency: "CLP",
     useGrouping: true,
 });
+
+//Esta función evita que el dropdown se cierre el clickear adentro de él
+$('.dropdown-menu').on('click', function (e) {
+    e.stopPropagation();});
 
 
 //Esta función carga las cartas vacías y las inserta en el "#contenedor-principal" del index.
@@ -17,10 +18,6 @@ $(document).ready(function() {
         }); 
 
 });
-
-//Esta función evita que el dropdown se cierre el clickear adentro de él
-$('.dropdown-menu').on('click', function (e) {
-    e.stopPropagation();});
 
 // Función para crear las cards de la tienda
 function crearCards() {
