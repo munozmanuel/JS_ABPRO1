@@ -149,7 +149,7 @@ function calcularMonto(){
         $('#despacho-total').html(formatoCL.format(valorDespacho));
         $('#monto-con-iva').html(formatoCL.format(precioConIva));
     } else {
-        valorDespacho = 'Gratis';
+        valorDespacho = ' Gratis';
         $('#despacho-total').html(valorDespacho);
     }
     

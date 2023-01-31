@@ -5188,7 +5188,7 @@ fieldset:disabled .btn {
   word-wrap: break-word;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .card>hr {
@@ -5287,8 +5287,8 @@ fieldset:disabled .btn {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-  border-radius: 10px;
-  border: .5px solid var(--color2);
+  border-radius: ;
+  border: .5px solid var(--master-color);
 
 }
 @keyframes foto{

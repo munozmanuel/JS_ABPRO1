@@ -4,12 +4,19 @@
 
 .contenedor-resumen {
     min-width: 40rem !important;
-    background-image: url(/assets/svg/wave\ \(3\).svg);
+    background-image: url(/assets/svg/wave\(8\).svg);
     background-repeat: no-repeat;
     background-position: bottom;
     opacity: ;
 }
-
+#secc-total{
+    padding: 10px;
+    line-height: 1px;
+}
+#monto-con-iva{
+    font-weight: 900;
+    color: var(--master-color);
+}
 #iconos-res-carro {
     display: flex;
     gap:0.7vw;
@@ -18,6 +25,7 @@
 .contador-resu {
     line-height: 1.5px !important;
     text-align: center;
+    background-color: red;
 }
 
 #cont-resu-carro {
@@ -28,12 +36,17 @@
 }
 
 #resumen-carro li {
+    background-color: var(--master-color);
+    color: white;
     display: grid;
     grid-template-columns: 3fr 0.5fr 1fr 0.2fr;
     width: 45w;
     gap: 1.8vw;
     padding-right: 1vw;
     border: 0.2px solid rgba(128, 128, 128, 0.384);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px ;
     margin: 6px;
     align-items: center;
     align-content: center;

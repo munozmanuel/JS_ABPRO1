@@ -169,7 +169,7 @@ const productDB = [
         "poferta": 255000,
         "dscto":"10%",
         "oferta": false,
-        "img": "assets/img/02_mac_.jpg",
+        "img": "assets/img/mac03.jpg",
         "cantidad": 1,
         "otros": {
             "fabricante": "Apple",
