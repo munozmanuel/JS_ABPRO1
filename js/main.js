@@ -1,12 +1,13 @@
-
-
-
 //Funcion para añadir formato CLP a los datos numéricos
 const formatoCL = new Intl.NumberFormat("es-CL", {
     style: "currency",
     currency: "CLP",
     useGrouping: true,
 });
+
+//Esta función evita que el dropdown se cierre el clickear adentro de él
+$('.dropdown-menu').on('click', function (e) {
+    e.stopPropagation();});
 
 
 //Esta función carga las cartas vacías y las inserta en el "#contenedor-principal" del index.
@@ -18,14 +19,11 @@ $(document).ready(function() {
 
 });
 
-//Esta función evita que el dropdown se cierre el clickear adentro de él
-$('.dropdown-menu').on('click', function (e) {
-    e.stopPropagation();});
 
 // Función para crear las cards de la tienda
 function crearCards() {
 
-    for (let i=0;i<productDB.length;i++){
+    for (let i=0; i<productDB.length ; i++){
         $("#img-"+i).attr('src',productDB[i].img);
         $("#titulo-"+i).html(productDB[i].nombre);
        
@@ -149,7 +147,7 @@ function calcularMonto(){
         $('#despacho-total').html(formatoCL.format(valorDespacho));
         $('#monto-con-iva').html(formatoCL.format(precioConIva));
     } else {
-        valorDespacho = ' Gratis';
+        valorDespacho = 'Gratis';
         $('#despacho-total').html(valorDespacho);
     }
     
@@ -393,7 +391,7 @@ function enviarCorreo() {
         if (valorDespacho != 'Gratis'){
            userDespacho = formatoCL.format(valorDespacho);
         } else {
-           userDespacho = valorDespacho;
+           userDespacho = "Gratis";
         };
 
         if (listaProductos != 0) {
@@ -418,6 +416,7 @@ function enviarCorreo() {
             }
             emailjs.send("service_r3trom4il", "template_8fx59a5", params).then(function (res) {
                 console.log('Mail enviado' + res.status);
+                alert('Email Enviado! (Esto debería ser un modal más bonito jaja');
             });
         };
     };
